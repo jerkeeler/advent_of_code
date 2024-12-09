@@ -54,12 +54,19 @@ class Main
   end
 
   def run_day
+    puts("Running day #{@day}...")
     require_relative("day_#{@day}")
     input_file = @options[:example] ? "inputs/day_#{@day}_example.txt" : "inputs/day_#{@day}.txt"
     input = File.read(input_file).strip
     solution = Solution.new(input)
-    solution.part1 if !@options.key?(:part) || @options[:part] == 1
-    solution.part2 if !@options.key?(:part) || @options[:part] == 2
+    if !@options.key?(:part) || @options[:part] == 1
+      puts('Part 1:')
+      solution.part1
+    end
+    return unless !@options.key?(:part) || @options[:part] == 2
+
+    puts('Part 2:')
+    solution.part2
   end
 end
 
