@@ -10,8 +10,15 @@ GEM
       net-http (>= 0.5.0)
     json (2.9.0)
     logger (1.6.2)
+    mini_portile2 (2.8.8)
     net-http (0.6.0)
       uri
+    nokogiri (1.17.0)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.17.0-arm64-darwin)
+      racc (~> 1.4)
+    racc (1.8.1)
     uri (1.0.2)
 
 PLATFORMS
@@ -21,6 +28,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   faraday
+  nokogiri
 
 BUNDLED WITH
    2.5.22

@@ -1,6 +1,7 @@
 class Solution
   def initialize(data)
     @data = data
+    puts(@data)
   end
 
   def part1
